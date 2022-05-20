@@ -78,6 +78,7 @@ body::-webkit-scrollbar-thumb {
   z-index: -5;
   /* width: 100%; */
   /* transition: 500ms; */
+  filter: brightness(12%);
 }
 
 .toggle_button {
@@ -110,7 +111,7 @@ body::-webkit-scrollbar-thumb {
   color: rgb(255, 255, 255);
 }
 
-.quiz_button { 
+.quiz_button {
   background-color: rgb(37, 37, 40);
   font-size: 50px;
   /* make the text bold */
@@ -118,6 +119,7 @@ body::-webkit-scrollbar-thumb {
   padding-left: 7rem;
   padding-right: 7rem;
 }
+
 .camera_settings {
   float: right;
 }
