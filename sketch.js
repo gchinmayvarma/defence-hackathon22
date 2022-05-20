@@ -13,7 +13,7 @@ let sketch = function (p) {
         p.stroke(255, 0, 69);
 
         p.textFont(text_font);
-        p.textSize(20);
+        p.textSize(13);
     }
     p.draw = function () {
         p.clear();
