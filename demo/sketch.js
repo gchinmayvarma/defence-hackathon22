@@ -57,16 +57,17 @@ let sketch = function (p) {
         p.translate(p.width, 0);
         p.rotate(PI / 2);
         p.fill(255, 0, 0);
-        p.textSize(16);
+        p.textSize(32);
         p.textAlign(p.LEFT, p.TOP);
         p.fill(255, 0, 0);
         p.text("VA Detector Not Found ", 0, 0);
         p.fill(0, 255, 0);
         p.text("Motion Detector Found ", 0, 30);
         p.text("Voltage : " + (31 + p.random(-1.2, 2)).toFixed(1) + "V", 0, 60);
+        p.fill(255, 165, 0);
         p.text("Amp : " + (400 + p.random(-1, 10)).toFixed(1) + "A", 0, 90);
 
-        p.fill(255, 165, 0);
+        p.fill(255, 0, 0);
         p.text("Temprature : " + (p.random(3000, 3100)).toFixed(0) + "C", 0, 120);
 
         p.translate(0, p.width);
