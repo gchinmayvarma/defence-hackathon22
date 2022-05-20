@@ -18,7 +18,7 @@ let sketch = function (p) {
     }
     p.setup = function () {
         p5jscanvas = p.createCanvas(0, 0, p.WEBGL);
-        p.disableFriendlyErrors = true; 
+        p.disableFriendlyErrors = true;
         p.cam = p.createCamera();
         p.pixelDensity(1);
         p.fill(255, 0, 69);
@@ -52,6 +52,10 @@ let sketch = function (p) {
             // p.textAlign(p.BOTTOM, p.RIGHT);
             // p.text("Marker Display ON", 0 , p.height - 5);
         }
+        p.translate(p.width / 2, 0);
+        p.text("Voltage : " + (29 + random(-1, 2)), 0, 0);
+        p.text("Amp : " + (), 0, 10);
+
     }
 
 }
