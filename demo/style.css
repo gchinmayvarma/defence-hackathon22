@@ -78,7 +78,6 @@ body::-webkit-scrollbar-thumb {
   z-index: -5;
   /* width: 100%; */
   /* transition: 500ms; */
-  filter: brightness(12%);
 }
 
 .toggle_button {
