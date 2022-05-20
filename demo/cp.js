@@ -1,5 +1,5 @@
 let Lerpspeed = 0.7;
-let flow_time = 0, flow_time_delta = 0; 
+let flow_time = 0, flow_time_delta = 0;
 function get_angle(x1, y1, x2, y2) { return Math.atan2((y1 - y2), (x1 - x2)); }
 class Custompoint {
   constructor(x, y, z) {
@@ -112,7 +112,7 @@ class Customhand {
         // monapple.text(i, this.points[i].x, this.points[i].y);
       }
     }
-    this.alpha = monapple.lerp(this.alpha, 1*(
+    this.alpha = monapple.lerp(this.alpha, 1 * (
       monapple.dist(
         this.avgpoint.x,
         this.avgpoint.y,
@@ -129,20 +129,20 @@ class Customhand {
         this.points[17].y,
         // this.points[17].z
       )), 0.1);
-    this.display_field();
+    //this.display_field();
 
     // monapple.stroke(0, 0, 255);
     // this.avgpoint.display();
   }
   display_field() {
-    let r = 400/zoomscale;
+    let r = 400 / zoomscale;
     let d = r / 5;
     let thetaZ = PI + Math.atan2(this.points[5].y - this.points[17].y, this.points[5].x - this.points[17].x);
     let thetaY = 0;//-PI/2 + Math.atan2( abs(this.points[5].x-this.points[17].x), (this.points[5].z-this.points[17].z));
     let thetaX = flow_time;//monapple.map( monapple.mouseX , 0 , monapple.width , PI/2 , PI+PI/2) ;
     monapple.push();
     monapple.translate((this.points[5].x + this.points[17].x) / 2, (this.points[5].y + this.points[17].y) / 2);
-    monapple.fill(200,255*this.alpha);
+    monapple.fill(200, 255 * this.alpha);
     monapple.rotateZ(thetaZ);
     monapple.rotateY(thetaY);
     monapple.rotateX(thetaX);
@@ -158,10 +158,10 @@ class Customhand {
     monapple.translate(0, ((monapple.frameCount / 2) % d) - r - d, 0);
     monapple.noStroke();
     // fill(137,207,240,200);
-    monapple.fill(255, monapple.map((monapple.frameCount / 2) % d, 0, d, 0, 255)*this.alpha);//255*this.alpha
+    monapple.fill(255, monapple.map((monapple.frameCount / 2) % d, 0, d, 0, 255) * this.alpha);//255*this.alpha
     for (let i = 0; i < r * 2; i += d) {
-      if (i == d) monapple.fill(255, 250*this.alpha);
-      if (i == r * 2 - d) monapple.fill(255, monapple.map((monapple.frameCount / 2) % d, 0, d, 255, 0)*this.alpha);
+      if (i == d) monapple.fill(255, 250 * this.alpha);
+      if (i == r * 2 - d) monapple.fill(255, monapple.map((monapple.frameCount / 2) % d, 0, d, 255, 0) * this.alpha);
       monapple.translate(0, d, 0);
       monapple.cone(3, 10, 4, 3);
     }
@@ -172,7 +172,7 @@ class Customhand {
     monapple.rotateY(PI / 2);
     monapple.noStroke();
     for (let i = r; i < 2 * r; i += r / 5) {
-      monapple.stroke(255, (255 - monapple.map(i, r, 2 * r, 0, 255))*this.alpha);
+      monapple.stroke(255, (255 - monapple.map(i, r, 2 * r, 0, 255)) * this.alpha);
       monapple.arc(0, 0, i, i, monapple.frameCount / 70 + PI - i / 100, monapple.frameCount / 70 + TWO_PI - i / 100);
       for (let j = -0.2; j <= TWO_PI - 0.2; j += TWO_PI / 24) {
         monapple.push();
