@@ -5,7 +5,7 @@ let sketch = function (p) {
         text_font = p.loadFont("demo/rockfont.ttf");
     }
     p.setup = function () {
-        p5jscanvas = p.createCanvas(p.windowWidth, p.windowHeight / 2, p.WEBGL);
+        p5jscanvas = p.createCanvas(p.windowWidth, p.windowHeight, p.WEBGL);
         p.disableFriendlyErrors = true;
         p.cam = p.createCamera();
         p.pixelDensity(1);
@@ -32,8 +32,18 @@ let sketch = function (p) {
         p.text("Temprature : " + (p.random(3000, 3100)).toFixed(0) + "C", 0, 120);
 
         p.translate(0, p.width);
-        p.text("Battery : 80%", 0, -30);
+        p.text("Electrode Status : OK", 0, -30);
         p.text("Stick out Length : " + (10 + p.random(0, 0.055)).toFixed(1) + "mm", 0, -60);
+
+        p.translate(p.height, -p.width);
+        p.textAlign(p.RIGHT, p.TOP);
+        p.text("Awake Time : 0", 0, 0);
+        p.text("Travel Distance : 0", 0, 30);
+        p.text("Travel Speed : 0", 0, 60);
+
+        p.translate(0, p.width);
+        p.text("Charge Left : 2h 32m", 0, -30);
+        p.text("Battery : 80%", 0, -60);
     }
 
 }
