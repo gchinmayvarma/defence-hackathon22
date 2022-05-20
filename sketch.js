@@ -10,5 +10,5 @@ function draw() {
     fill(255, 0, 0);
     textSize(32);
     textAlign(LEFT, TOP);
-    text("hello", 0, 0);
+    text("Helment ", 0, 0);
 }
