@@ -16,13 +16,15 @@ let sketch = function (p) {
         p.textSize(20);
     }
     p.draw = function () {
-        // p.clear();
-        p.background(0, 255, 0)
+        p.clear();
+        // p.background(0, 255, 0)
         p.translate(-p.width / 2, -p.height / 2);
 
         p.translate(p.width, 0);
         p.rotate(PI / 2);
         p.fill(255, 0, 0);
+        p.fill(0, 255, 0);
+        p.fill(255, 165, 0);
         p.textSize(32);
         p.textAlign(p.LEFT, p.TOP);
         p.text("VA Detector Not Found ", 0, 0);
