@@ -9,3 +9,14 @@ body {
 canvas {
     display: block;
 }
+
+.input_video {
+    /* align center */
+    /* position: absolute; */
+    top: 0%;
+    left: 50%;
+    transform: translate(0%, 0%);
+    z-index: -5;
+    /* width: 100%; */
+    /* transition: 500ms; */
+}
